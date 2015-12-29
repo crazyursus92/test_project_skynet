@@ -1,0 +1,82 @@
+.order{
+  &-title{
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    line-height: 85px;
+    border-bottom:1px solid $c-border;
+    margin-bottom: 70px;
+    background-color: #fff;
+  }
+  &__prev{
+    position: absolute;
+    font-size: 50px;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $c-green;
+    cursor: pointer;
+    &:hover{
+      color: #4c9835;
+    }
+  }
+  &__item{
+    background-color: #fff;
+    border: solid $c-border;
+    border-width: 1px 0;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+
+  }
+  &__content{
+    position: relative;
+  }
+  &__name{
+    font-size: 25px;
+    color: $c-green;
+    line-height: 85px;
+    border-bottom:1px solid $c-border;
+    @include push(.5);
+  }
+  &__next{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $c-border;
+    z-index: 10;
+    cursor: pointer;
+    &:hover{
+      color: #2c2c2c;
+    }
+  }
+  &__price{
+    @include push(.5);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 70px;
+  }
+  &__one-pay, &__discount{
+    font-size: 18px;
+    @include push(.5);
+  }
+  &__works-time{
+    font-size: 18px;
+    padding: 20px 0;
+    @include push(.5);
+    color: #dfdfdf;
+    border-bottom: 1px solid $c-border;
+    margin-bottom: 10px;
+  }
+
+  &__button{
+    display: block;
+    height: 80px;
+    width: 90%;
+    margin: auto;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: $c-green;
+  }
+}

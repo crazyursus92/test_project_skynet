@@ -1,0 +1,18 @@
+<div class="order container" data-ng-controller="OrderCtrl">
+    <div class="order-title">
+        <i class="fa fa-chevron-left order__prev" data-ng-click="toTariff()"></i>
+        Выбор тарифа
+    </div>
+    <div class="order__item" >
+        <div class="order__name">{{helper.getMonth(term.pay_period)}}</div>
+        <div class="order__price">{{helper.priceToMoth(term)}} Р</div>
+        <div class="order__one-pay">разовый платеж - {{term.price}} Р</div>
+        <div class="order__discount">скидка - {{helper.discount(term, tariff.tarifs)}} Р</div>
+        <div class="order__works-time">
+            вступит в силу - сегодня <br>
+            активно до {{helper.endWork(term.pay_period)}}
+        </div>
+        <button class="order__button">Выбрать</button>
+    </div>
+
+</div>

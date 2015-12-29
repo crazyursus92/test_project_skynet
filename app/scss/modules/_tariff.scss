@@ -1,0 +1,87 @@
+.tariffs{
+  background-color: #efeff4;
+}
+.tariff{
+  &__item{
+    background-color: #fff;
+    border: solid $c-border;
+    border-width: 1px 0;
+    margin-bottom: 40px;
+    @include breakpoint(640px){
+      @include span(6);
+    }
+    @include breakpoint(1024px){
+      @include span(4);
+    }
+    &:nth-child(even){
+      @include breakpoint(640px){
+        margin-right: 0;
+        border-width: 1px;
+      }
+      @include breakpoint(1024px){
+        margin-right: 1.69492%;
+      }
+    }
+    &:nth-child(3n+3){
+      @include breakpoint(1024px){
+        margin-right: 0;
+      }
+    }
+  }
+  &__name{
+    font-size: 25px;
+    color: $c-green;
+    line-height: 85px;
+    border-bottom:1px solid $c-border;
+    @include push(.5);
+  }
+  &__info{
+    padding: 15px 0 0;
+    position: relative;
+  }
+  &__next{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $c-border;
+    z-index: 10;
+    cursor: pointer;
+    &:hover{
+      color: #2c2c2c;
+    }
+  }
+  &__speed{
+    width: 40%;
+    height: 65px;
+    text-align: right;
+    line-height: 65px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 20px;
+    color: #ffffff;
+    background-color: #0075d9;
+    white-space: nowrap;
+
+  }
+  &__price{
+    @include push(.5);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 70px;
+  }
+  &__free-option{
+    font-size: 18px;
+    list-style: none;
+    @include push(.5);
+    border-bottom:1px solid $c-border;
+    padding-bottom: 20px;
+  }
+  &__read-more{
+    font-size: 18px;
+    line-height: 90px;
+    @include push(.5);
+    color: #0075d9;
+  }
+}

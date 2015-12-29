@@ -1,0 +1,16 @@
+
+<div class="tariffs container" >
+    <div class="tariff__item "  data-ng-repeat="tariff in data.tarifs">
+        <div class="tariff__name"> Тариф "{{tariff.title}}"</div>
+        <div class="tariff__info" ng-dblclick="toTerm($index)">
+            <a href="#tariff/{{$index}}"></a>
+            <i class="fa fa-chevron-right tariff__next" ng-click="toTerm($index)"></i>
+            <div class="tariff tariff__speed tariff__speed-{{tariff.speed}}">{{tariff.speed}} Мбит/c</div>
+            <div class="tariff__price">{{rangePrice(tariff.tarifs)}} Р/мес</div>
+            <ul class="tariff__free-option" >
+                <li data-ng-repeat="option in tariff.free_options">{{option}}</li>
+            </ul>
+        </div>
+        <a href="{{tariff.link}}" class="tariff tariff__read-more">Узнать подробнее на сайте www.sknt.ru</a>
+    </div>
+</div>

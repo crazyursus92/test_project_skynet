@@ -1,0 +1,18 @@
+<div class="terms container" data-ng-controller="TermCtrl">
+    <div class="terms-title">
+
+        <a class="fa fa-chevron-left terms__prev" data-ng-click="toTariffs()"></a>
+        Тариф "{{tariff.title}}"
+    </div>
+   <div>
+       <div class="term__item" data-ng-repeat="term in tariff.tarifs"  ng-click="toOrder(term.ID)">
+           <div class="term__name" >{{helper.getMonth(term.pay_period)}}</div>
+           <div class="term__content">
+               <i class="fa fa-chevron-right term__next" ng-dblclick="toOrder(term.ID)"></i>
+               <div class="term__price">{{helper.priceToMoth(term)}} Р</div>
+               <div class="term__one-pay">разовый платеж - {{term.price}} Р</div>
+               <div class="term__discount">скидка - {{helper.discount(term, tariff.tarifs)}} Р</div>
+           </div>
+       </div>
+   </div>
+</div>

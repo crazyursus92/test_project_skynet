@@ -1,0 +1,55 @@
+html, body{
+  height: 100%;
+
+  font-size: 17px;
+  color: black;
+  background-color: #efeff4;
+}
+
+.container{
+  @include container();
+  max-width: none !important;
+}
+
+
+
+p{
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+ul{
+  text-align: left;
+  list-style-position: inside;
+}
+
+li{
+  margin: 5px 0;
+}
+
+strong{
+  font-weight: normal;
+
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  text-align: center;
+}
+
